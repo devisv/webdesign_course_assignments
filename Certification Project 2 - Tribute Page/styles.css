@@ -1,0 +1,124 @@
+html {
+    background-color: white;
+    font-family: 'Exo', sans-serif;
+    font-family: 'Lexend', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(58, 74, 92);
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: wheat;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 15px 0 20px 0;
+    color: white;
+}
+
+
+figure {
+    max-width: 75vw;
+    background-color:#ffff;
+    border-radius: 300px 300px 0 00;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    margin:50px auto 10px auto; 
+    display: block; /*aggiunto solo perché richiesto dalla scaletta, altrimenti non avrei nemmeno docuto usare flexbox perchè tanto era già tutto a posto di default....*/
+    border-radius: 200px 200px 300px 300px;
+    margin-bottom: 20px;
+}
+
+
+figcaption {
+    font-style: italic;
+    font-size: 1rem;
+    margin: 20px auto 20px auto;
+}
+
+
+#tribute-info {
+    max-width: 60vw;
+    background-color: #b4914b;
+    border-radius: 0 0 300px 300px;
+    color: white;
+    text-align: center;
+    margin: 0 auto 15px auto;
+    padding: 0 0 30px 0;
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: 500;
+    padding: 25px 0 15px 0;
+    color: white;
+}
+
+ul {
+    max-width: 650px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+ li {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    line-height: 1.5rem ;
+}
+
+.highlight {
+    font-weight: 800;
+}
+
+#quote {
+    background-color:#b35042;
+    max-width: 800px;
+    margin: 30px auto 10px auto;
+    padding: 20px;
+    border-radius: 20px;
+    font-style: italic;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+}
+
+.line {
+    max-width: 10vw;
+    margin: 40px auto 30px auto;
+    height: 3px;
+    background-color: white;
+}
+
+footer {
+    max-width: 60vw;
+    margin: 0 auto 20px auto;
+    font-size: 25px;
+    color: white;
+}
+
+#tribute-link {
+    text-decoration: none;
+    color: wheat;
+}
+
