@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    /*vedi se da problemi*/
+    font-family: 'Quicksand', sans-serif;
+    color: #2e2d2d;
+    /*background pattern preso da internet:*/
+    background-image: radial-gradient(#f0ddf1 2px, transparent 2px), radial-gradient(#f0ddf1 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #dbfdf1;
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    min-height: 70px;
+    background-color: #D8B5FF;
+    padding-top: 8px;
+    /*soluzione "casereccia per centrare verticalmente.Vedi se riesci a fare di meglio. */
+    z-index: 1;
+    /*aggiunto per risolvere il problema di overlay causato dalla proprietà "scale" di ".p-category:hover" impostata più sotto*/
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+nav i {
+    font-size: 40px;
+    padding: 10px 10px 10px 50px;
+}
+
+/*aggiunto per permettere buona leggibilità dell'header fino a schermi 660px wide*/
+nav i:first-child {
+    padding: 10px 10px 10px 0;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive, serif;
+    font-size: 25px;
+}
+
+#link-logo1,
+#link-logo2 {
+    text-decoration: none;
+    color: #2e2d2d;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.menu a {
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 40px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #2e2d2d;
+}
+
+.menu a:hover {
+    background-color: #b4ecff;
+    font-weight: 600;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+main {
+    padding-top: 120px;
+    min-width: 70%;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    /*vedi se serve*/
+    padding-bottom: 100px;
+    /*per evitare che si sovrapponga al footer, ma ancora non capisco perchè se uso margin-bottom non funziona...E comunque non capisco perchè non basti mettere un padding o un margin bottom di 50-70 px per non avere sovrapposizione dal momento che il foter è alto solo 50px....*/
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 140px;
+    margin: auto;
+    width: 100%;
+    /*vedi se serve*/
+}
+
+#email {
+    min-width: 200px;
+    padding: 5px 5px 5px 45px;
+    margin: 20px 0 20px 0;
+    text-align: left;
+    border-radius: 3px;
+    border: lightgrey;
+}
+
+button {
+    height: 30px;
+    width: 130px;
+    font-weight: bold;
+    background-color: #f781c2;
+    color: #FFFF;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b4ecff;
+    color: #f781c2;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.product-categories {
+    margin: auto;
+    /*vedi se serve*/
+}
+
+.p-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 40px;
+    z-index: 0;
+}
+
+
+.p-category:hover {
+    font-weight: 500;
+    transform: scale(1.1);
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 0;
+    /*aggiunto per sistemare il problema di overlay rispetto a <header>*/
+
+}
+
+.p-category h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.product-icon {
+    font-size: 30px;
+}
+
+.description {
+    padding-left: 25px;
+}
+
+.description p {
+    padding-top: 5px;
+    font-size: 1.2rem;
+}
+
+/*usato per "neutralizzare solo per h2 il padding di .description + padding di .service che altrimenti farebbe apparire disallineati gli h2 di questo container rispetto al titolo contenuto in <form>*/
+.description h2 {
+    margin-left: -35px;
+}
+
+/* #video {
+    margin: 50px 0 50px 0;
+}*/
+
+.central-photo {
+    width: 500px;
+    height: 300px;
+    margin: 40px 0 40px 0;
+    border-radius: 8px;
+}
+
+.pricing-cards {
+    width: 650px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.card {
+    height: 200px;
+    width: 30%;
+    border-radius: 5px;
+    background-color: #f0ddf1;
+    box-shadow: 3px 3px 3px gray;
+}
+
+
+h3 {
+    background-color: #CA9CFF;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    /*se non lo mettevo anche qui gli spigoli di h3 restavano vivi e coprivano la curvatura degli spigoli del div 'card'*/
+    font-size: 1.5rem;
+}
+
+
+.card p {
+    padding: 2.5px 0 2.5px 0;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.buy-button {
+    background-color: #f781c2;
+    border: none;
+    border-radius: 2px;
+    margin-top: 8px;
+    font-weight: 500;
+    color: #FFFF;
+}
+
+.buy-button:hover {
+    background-color: #b4ecff;
+    color: #f781c2;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+footer {
+    /*DA SISTEMARE PERCHE COPRE COSE ANCHE QUANDO ZOOM 100%*/
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #D8B5FF;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links {
+    text-align: right;
+    padding: 5px 20px 5px 5px;
+}
+
+.link {
+    text-decoration: none;
+    padding-left: 5px;
+    color: #2e2d2d;
+}
+
+.copyright {
+    text-align: right;
+    padding: 5px 20px 5px 5px;
+}
+
+
+@media (max-width:559px) {
+
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+
+    .logo-box {
+        padding-left: 0;
+        margin: 10px 0 10px 0;
+    }
+
+    .logo-box i {
+        display: none !important;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .menu a {
+        font-size: 13px;
+        width: 120px;
+        text-align: center;
+        padding: 7px 5px 7px 5px;
+        margin: 5px 0 5px 0;
+        border-radius: 3px;
+    }
+
+    main {
+        padding-top: 220px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        /*vedi se serve*/
+        padding-bottom: 100px;
+        /*per evitare che si sovrapponga al footer, ma ancora non capisco perchè se uso margin-bottom non funziona...E comunque non capisco perchè non basti mettere un padding o un margin bottom di 50-70 px per non avere sovrapposizione dal momento che il foter è alto solo 50px....*/
+
+    }
+
+
+    .p-category {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .p-category h2 {
+        padding-top: 7px;
+    }
+
+
+    .central-photo {
+        width: 100%;
+        height: auto;
+        /*per preservare la ratio dell'immagine dopo aver cambiato la larghezza*/
+        border-radius: 0;
+    }
+
+
+    .pricing-cards {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+
+    footer {
+        justify-content: center;
+    }
+
+    .links,
+    .copyright {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
